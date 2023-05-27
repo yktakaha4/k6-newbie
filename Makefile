@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-CASE ?= test-example
+CASE ?= example-test
 
 .PHONY: install
 install:

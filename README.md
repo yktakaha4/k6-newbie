@@ -16,8 +16,10 @@ make install
 # Start docker
 make start
 
-# Run test
+# Run example test
 make run
+# Specify case
+make run CASE=sample-http-api-test
 
 # Access test results
 # http://localhost:3000/dashboards
