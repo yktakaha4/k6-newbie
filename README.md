@@ -1,5 +1,9 @@
 # k6-newbie
 
+## Prerequirements
+
+- Docker Compose (version 3)
+
 ## Usage
 
 ```sh
