@@ -1,5 +1,8 @@
 # k6-newbie
 
+- Performance testing example with [k6](https://k6.io/) and [Grafana](https://grafana.com/)
+  - Use [ybkuroki/go-webapp-sample](https://github.com/ybkuroki/go-webapp-sample) as test target
+
 ## Prerequirements
 
 - Docker Compose (version 3)
