@@ -1,19 +1,13 @@
 version: '3'
 services:
-  app:
-    build:
-      context: docker/app
-      dockerfile: Dockerfile
-    ports:
-      - 8080:8080
-
   k6:
     image: grafana/k6:0.44.1
-    entrypoint: sleep infinity
+    entrypoint: sh
     volumes:
-      - ./docker/k6:/home/k6
+      - ./docker/k6/run_test.sh:/home/k6/run_test.sh
+      - ./dist:/home/k6/scenarios
     environment:
-      - TEST_APP_BASE_PATH=http://app:8080
+      - TEST_APP_BASE_PATH=https://test.k6.io
       - K6_OUT=experimental-prometheus-rw
       - K6_PROMETHEUS_RW_SERVER_URL=http://prometheus:9090/api/v1/write
       - K6_PROMETHEUS_RW_TREND_AS_NATIVE_HISTOGRAM=true
@@ -35,3 +29,6 @@ services:
       - GF_AUTH_BASIC_ENABLED=false
     volumes:
       - ./docker/grafana:/etc/grafana/provisioning/
+
+volumes:
+  node_modules:
