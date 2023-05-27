@@ -7,7 +7,6 @@ services:
       - ./docker/k6/run_test.sh:/home/k6/run_test.sh
       - ./dist:/home/k6/scenarios
     environment:
-      - TEST_APP_BASE_PATH=https://test.k6.io
       - K6_OUT=experimental-prometheus-rw
       - K6_PROMETHEUS_RW_SERVER_URL=http://prometheus:9090/api/v1/write
       - K6_PROMETHEUS_RW_TREND_AS_NATIVE_HISTOGRAM=true
@@ -29,6 +28,3 @@ services:
       - GF_AUTH_BASIC_ENABLED=false
     volumes:
       - ./docker/grafana:/etc/grafana/provisioning/
-
-volumes:
-  node_modules:
