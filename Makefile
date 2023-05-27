@@ -13,6 +13,7 @@ build:
 
 .PHONY: start
 start:
+	mkdir dist/
 	docker compose up
 
 .PHONY: stop
