@@ -1,6 +1,6 @@
-import { randomString, randomIntBetween } from "https://jslib.k6.io/k6-utils/1.1.0/index.js";
+import { randomString, randomIntBetween } from "jslib.k6.io/k6-utils/1.1.0/index.js";
 import ws from 'k6/ws';
-import { check, sleep } from 'k6';
+import { check } from 'k6';
 
 let sessionDuration = randomIntBetween(5000, 60000); // user session between 5s and 1m
 let chatRoomName = 'publicRoom'; // choose your chat room name

@@ -4,6 +4,7 @@ CASE ?= example-test
 
 .PHONY: install
 install:
+	git submodule update --init --recursive
 	npm install
 	docker compose build --no-cache
 
@@ -13,7 +14,7 @@ build:
 
 .PHONY: start
 start:
-	mkdir dist/
+	mkdir -p dist/
 	docker compose up
 
 .PHONY: stop

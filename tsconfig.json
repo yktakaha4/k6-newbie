@@ -21,6 +21,11 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
 
-    "skipLibCheck": true
+    "skipLibCheck": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "jslib.k6.io/*": ["vendor/jslib.k6.io/lib/*"]
+    }
   }
 }

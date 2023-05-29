@@ -15,6 +15,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.js'],
+    alias: {
+      'jslib.k6.io': path.resolve(__dirname, 'vendor/jslib.k6.io/lib'),
+    },
   },
   module: {
     rules: [

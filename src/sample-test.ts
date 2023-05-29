@@ -1,7 +1,7 @@
 import http from "k6/http";
 import { check, group, sleep } from "k6";
 import { Counter, Rate, Trend } from "k6/metrics";
-import { randomIntBetween } from "https://jslib.k6.io/k6-utils/1.0.0/index.js";
+import { randomIntBetween } from "jslib.k6.io/k6-utils/1.0.0/index.js";
 
 const loginData = JSON.parse(open("./users.json"));  // download the data file here: https://test.k6.io/static/examples/users.json
 
