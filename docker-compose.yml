@@ -1,7 +1,7 @@
 version: '3'
 services:
   k6:
-    image: grafana/k6:0.44.1
+    image: grafana/k6:0.45.1
     entrypoint: sh
     volumes:
       - ./docker/k6/run_test.sh:/home/k6/run_test.sh
